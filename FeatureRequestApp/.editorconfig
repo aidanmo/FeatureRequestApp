@@ -1,0 +1,8 @@
+﻿root = true  
+
+
+[*.cs]
+csharp_style_namespace_declarations = file_scoped
+
+# IDE0051: Remove unused private members
+dotnet_diagnostic.IDE0051.severity = suggestion

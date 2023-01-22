@@ -1,0 +1,12 @@
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/bin/Debug/net6.0/FeatureRequestAppLibrary.deps.json
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/bin/Debug/net6.0/FeatureRequestAppLibrary.dll
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/bin/Debug/net6.0/FeatureRequestAppLibrary.pdb
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.csproj.AssemblyReference.cache
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.AssemblyInfoInputs.cache
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.AssemblyInfo.cs
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.csproj.CoreCompileInputs.cache
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.dll
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/refint/FeatureRequestAppLibrary.dll
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/FeatureRequestAppLibrary.pdb
+/Users/aidanmorrison/Desktop/Dev Projects Folder/FeatureRequestApp/FeatureRequestApp/FeatureRequestAppLibrary/obj/Debug/net6.0/ref/FeatureRequestAppLibrary.dll

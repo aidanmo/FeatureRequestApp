@@ -1,0 +1,153 @@
+﻿@page "/Sample_Data"
+@inject ICategoryData categoryData
+@inject IStatusData statusData
+@inject IUserData userData
+@inject IFeatureRequestData featureRequestData
+
+<h3>Component1</h3>
+
+@if (categoriesCreated)
+{
+    <h4>Categories have been created</h4>
+}
+else
+{
+    <button class="btn btn-primary" @onclick="CreateCategories">Create Categories</button>
+}
+
+@if (statusesCreated)
+{
+    <h4>Statuses have been created</h4>
+}
+else
+{
+    <button class="btn btn-primary" @onclick="CreateStatuses">Create Statuses</button>
+}
+
+
+@code {
+
+    private bool categoriesCreated = false;
+    private bool statusesCreated = false;
+
+    private async Task GenerateSampleData()
+    {
+        UserModel user = new()
+        {
+            FirstName = "Aidan",
+            LastName = "Morrison",
+            DisplayName = "Amor",
+            EmailAddress = "amor@aidan.com",
+            ObjectIdentifier = "xyz-365"
+        };
+        await userData.CreateUser(user);
+
+        var foundUser = await userData.GetUserFromAuthentication("xyz-365");
+        var categories = await categoryData.GetAllCategories();
+        var statuses = await statusData.GetAllStatuses();
+
+        FeatureRequestModel feature1 = new()
+        {
+            Author = new BasicUserModel(foundUser),
+            Category = categories[0],
+            FeatureRequest = "suggestion1",
+            Description = "New feature request"
+        };
+        await featureRequestData.CreateFeatureRequest(feature1);
+
+        FeatureRequestModel feature2 = new()
+        {
+            Author = new BasicUserModel(foundUser),
+            Category = categories[1],
+            FeatureRequest = "suggestion1",
+            Description = "New feature request",
+            FeatureStatus = statuses[1],
+            OwnerNotes = "Note for status"
+
+        };
+        await featureRequestData.CreateFeatureRequest(feature2);
+    }
+
+    private async Task CreateCategories()
+    {
+        var categories = await categoryData.GetAllCategories();
+
+        if (categories?.Count > 0)
+        {
+            return;
+        }
+
+        CategoryModel cat = new()
+        {
+            CategoryName = "Functionality",
+            CategoryDescription = "New functionality requests"
+        };
+        await categoryData.CreateCategory(cat);
+
+        cat = new()
+        {
+            CategoryName = "UI",
+            CategoryDescription = "Layout and design request"
+        };
+        await categoryData.CreateCategory(cat);
+
+        cat = new()
+        {
+            CategoryName = "Report",
+            CategoryDescription = "New reporting request"
+        };
+        await categoryData.CreateCategory(cat);
+
+        cat = new()
+        {
+            CategoryName = "Other",
+            CategoryDescription = "Not sure which category"
+        };
+        await categoryData.CreateCategory(cat);
+
+        categoriesCreated = true;
+
+    }
+
+
+    private async Task CreateStatuses()
+    {
+        var statuses = await categoryData.GetAllCategories();
+
+        if (statuses?.Count > 0)
+        {
+            return;
+        }
+
+        StatusModel stat = new()
+        {
+            StatusName = "Completed",
+            StatusDescription = "The Feature request has  been accepted."
+        };
+        await statusData.CreateStatus(stat);
+
+        stat = new()
+        {
+            StatusName = "Watching",
+            StatusDescription = "The feature request is intresting and we are watching to guage intrest."
+        };
+        await statusData.CreateStatus(stat);
+
+        stat = new()
+        {
+            StatusName = "Upcoming",
+            StatusDescription = "The feature request was accepted and will be coming soon."
+        };
+        await statusData.CreateStatus(stat);
+
+        stat = new()
+        {
+            StatusName = "Dismissed",
+            StatusDescription = "The feature request was rejected"
+        };
+        await statusData.CreateStatus(stat);
+
+        statusesCreated = true;
+    }
+}
+
