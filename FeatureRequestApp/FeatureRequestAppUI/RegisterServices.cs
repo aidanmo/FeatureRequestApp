@@ -16,6 +16,7 @@ namespace FeatureRequestAppUI
 			builder.Services.AddSingleton<ICategoryData, MongoCategoreyData>();
 			builder.Services.AddSingleton<IStatusData, MongoStatusData>();
 			builder.Services.AddSingleton<IUserData, MongoUserData>();
+			builder.Services.AddSingleton<IFeatureRequestData, MongoFeatureRequestData>();
         }
 	}
 }

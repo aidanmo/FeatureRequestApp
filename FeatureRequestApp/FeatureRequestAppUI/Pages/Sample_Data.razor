@@ -4,7 +4,7 @@
 @inject IUserData userData
 @inject IFeatureRequestData featureRequestData
 
-<h3>Component1</h3>
+<h3>Sample Data</h3>
 
 @if (categoriesCreated)
 {
@@ -106,13 +106,12 @@ else
         await categoryData.CreateCategory(cat);
 
         categoriesCreated = true;
-
     }
 
 
     private async Task CreateStatuses()
     {
-        var statuses = await categoryData.GetAllCategories();
+        var statuses = await statusData.GetAllStatuses();
 
         if (statuses?.Count > 0)
         {

@@ -1,10 +1,51 @@
 ﻿@page "/"
+@inject ICategoryData categoryData
+@inject IStatusData statusData
+@inject IFeatureRequestData featureRequestData
+@inject IUserData userData
+@inject NavigationManager navManager
+@inject ProtectedSessionStorage sessionStorage 
 
-<PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+@code {
+    private List<FeatureRequestModel> feature;
+    private List<CategoryModel> categories;
+    private List<StatusModel> statuses;
 
-Welcome to your new app.
+    private string selectedCategory = "All";
+    private string selcetedStatus = "All";
+    private string searchText = "";
+    bool isSortedByNew = true;
 
+    protected async override Task OnInitializedAsync()
+    {
+        categories = await categoryData.GetAllCategories();
+        statuses = await statusData.GetAllStatuses();
+
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await LoadFilterState();
+            await FilterFeatures();
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadFilterState()
+    {
+        var stringResults = await sessionStorage.GetAsync<string>(nameof(selectedCategory));
+        selectedCategory = stringResults.Success ? stringResults.Value : "All";
+
+        stringResults
+    }
+
+    private async Task FilterFeatures()
+    {
+
+    }
+}
 
 

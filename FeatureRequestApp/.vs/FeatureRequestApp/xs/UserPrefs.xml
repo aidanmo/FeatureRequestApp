@@ -1,15 +1,8 @@
 ﻿<Properties StartupConfiguration="{B4AB291E-C232-4C5C-919A-7D87824C59A0}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FeatureRequestAppUI/Pages/Sample_Data.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FeatureRequestAppLibrary/DataAccess/MongoCatagoreyData.cs">
     <Files>
-      <File FileName="FeatureRequestAppUI/RegisterServices.cs" Line="18" Column="62" />
-      <File FileName="FeatureRequestAppUI/Pages/Sample_Data.razor" Line="69" Column="6" />
-      <File FileName="FeatureRequestAppLibrary/Models/FeatureRequestModel.cs" Line="24" Column="31" />
+      <File FileName="FeatureRequestAppUI/Pages/Index.razor" Line="42" Column="22" />
+      <File FileName="FeatureRequestAppLibrary/DataAccess/MongoCatagoreyData.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,21 +12,27 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="DataAccess" expanded="True" />
+              <Node name="DataAccess" expanded="True">
+                <Node name="MongoCatagoreyData.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
             </Node>
             <Node name="FeatureRequestAppUI" expanded="True">
               <Node name="Pages" expanded="True">
-                <Node name="Sample_Data.razor" selected="True" />
+                <Node name="Error.cshtml" expanded="True" />
               </Node>
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.FeatureRequestAppUI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
